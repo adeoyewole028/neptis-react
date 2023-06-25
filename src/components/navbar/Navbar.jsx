@@ -37,7 +37,7 @@ const Navbar = () => {
         isScrolled ? "bg-[#221c38] max-w-none shadow-md fixed z-20" : "" // Add the background color class when isScrolled is true
       } `}
     >
-      <header className={`absolute inset-x-0 top-0  bg-inherit `}>
+      <header className="absolute inset-x-0 top-0  bg-inherit z-50">
         <nav
           className="flex items-center justify-between p-6 lg:px-8"
           aria-label="Global"
