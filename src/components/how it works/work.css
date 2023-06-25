@@ -1,0 +1,119 @@
+
+/* Adjust the border height based on screen size */
+.line {
+    padding-top: 1rem !important;
+    top: 5px !important;
+    height: 130px !important;
+  }
+  
+  /* CSS for AI-Powered Website Generation feature */
+  .ai {
+    height: 230px !important;
+  }
+  
+  /* Media queries for responsive adjustments */
+  @media (min-width: 360px) and (max-width: 412px) {
+    .line {
+      padding-top: 1rem !important;
+      top: 5px !important;
+      height: 170px !important;
+    }
+  
+    .ai {
+      height: 230px !important;
+    }
+  }
+  
+  @media (min-width: 280px) and (max-width: 359px) {
+    .line {
+      padding-top: 1rem !important;
+      top: 5px !important;
+      height: 230px !important;
+    }
+  
+    .ai {
+      height: 256px !important;
+    }
+  }
+  
+  @media (min-width: 390px) and (max-width: 390px) {
+    .line {
+      padding-top: 1rem !important;
+      top: 5px !important;
+      height: 150px !important;
+    }
+  
+    .ai {
+      height: 230px !important;
+    }
+  }
+  
+  @media (min-width: 393px) and (max-width: 393px) {
+      .line {
+        padding-top: 1rem !important;
+        top: 5px !important;
+        height: 150px !important;
+      }
+    
+      .ai {
+        height: 230px !important;
+      }
+    }
+  
+  @media (min-width: 412px) and (max-width: 540px) {
+    .line {
+      padding-top: 1rem !important;
+      top: 5px !important;
+      height: 155px !important;
+    }
+  
+    .ai {
+      height: 230px !important;
+    }
+  }
+  
+  @media (min-width: 538px) and (max-width: 645px) {
+    .line {
+      padding-top: 1rem !important;
+      top: 5px !important;
+      height: 125px !important;
+    }
+  
+    .ai {
+      height: 230px !important;
+    }
+  }
+  
+  @media (min-width: 640px) {
+    .line {
+      padding-top: 1rem !important;
+      top: 5px !important;
+      height: 120px !important;
+    }
+    .ai {
+      height: 230px;
+    }
+  }
+  
+  @media (min-width: 1024px) and (max-width: 1138px) {
+    .line {
+      padding-top: 1rem;
+      top: 5px;
+      height: 120px;
+    }
+    .ai {
+      height: 230px !important;
+    }
+  }
+  
+  @media (min-width: 1280px) {
+    .line {
+      padding-top: 1rem !important;
+      top: 5px !important;
+      height: 120px !important;
+    }
+    .ai {
+      height: 230px !important;
+    }
+  }
+  
