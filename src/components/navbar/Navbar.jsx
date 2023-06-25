@@ -15,8 +15,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollTop =
-        window.scrollY || document.documentElement.scrollTop;
+      const scrollTop = window.scrollY || document.documentElement.scrollTop;
       const scrollThreshold = 100; // Adjust this value as needed
 
       // Check if the page is scrolled beyond the threshold
@@ -34,7 +33,7 @@ const Navbar = () => {
 
   return (
     <div
-      className={`mx-auto mt-5 py-4 max-w-7xl px-2 sm:px-6 lg:px-8 ${
+      className={`mx-auto  py-4 max-w-7xl px-2 sm:px-6 lg:px-8 ${
         isScrolled
           ? "bg-[#221c38] shadow-md w-full fixed top-0 left-0 z-20 mt-0"
           : "" // Add the background color class when isScrolled is true
