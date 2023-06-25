@@ -33,13 +33,11 @@ const Navbar = () => {
 
   return (
     <div
-      className={`mx-auto  py-4 max-w-7xl px-2 sm:px-6 lg:px-8 ${
-        isScrolled
-          ? "bg-[#221c38] shadow-md w-full fixed top-0 left-0 z-20 mt-0"
-          : "" // Add the background color class when isScrolled is true
+      className={`mx-auto  py-4 max-w-7xl px-2 sm:px-6 lg:px-8 w-full ${
+        isScrolled ? "bg-[#221c38] max-w-none shadow-md fixed z-20" : "" // Add the background color class when isScrolled is true
       } `}
     >
-      <header className={`absolute inset-x-0 top-0 z-50 bg-inherit`}>
+      <header className={`absolute inset-x-0 top-0  bg-inherit `}>
         <nav
           className="flex items-center justify-between p-6 lg:px-8"
           aria-label="Global"
