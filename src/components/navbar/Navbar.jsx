@@ -83,12 +83,12 @@ const Navbar = () => {
               ))}
             </div>
             <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-              <a
-                href="/login"
+              <Link
+                to="/register"
                 className="text-sm font-semibold leading-6 bg-white px-10 py-5 rounded-full text-[#221C38] hover:bg-indigo-500 hover:text-white"
               >
                 Get Started
-              </a>
+              </Link>
             </div>
           </div>
           <div className="flex lg:hidden">

@@ -1,4 +1,5 @@
 import { lazy, Suspense } from "react";
+import { Link } from "react-router-dom";
 
 // Define lazy-loaded versions of images
 const FrameImageOne = lazy(() => import("../frameImages/FrameImageOne"));
@@ -18,12 +19,12 @@ const Hero = () => {
               reality&quot;
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
-              <a
-                href="#"
+              <Link
+                to="/register"
                 className="rounded-full bg-[#A522C3] px-10 py-4 lg:py-5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >
                 Get started
-              </a>
+              </Link>
             </div>
           </div>
         </div>
