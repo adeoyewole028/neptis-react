@@ -7,7 +7,6 @@ import Home from "../pages/home/index";
 import Login from "../pages/authentication/login/index";
 import ForgotPassword from "../pages/authentication/forgotPassword/forgot-password";
 import Register from "../pages/authentication/registration/index";
-import SignIn from "../pages/authentication/login/sign-in";
 
 function InAppPrivateRoute() {
   const { isLoggedIn, user } = useSelector((state) => state.loginReducer);
@@ -51,7 +50,6 @@ export default function AppRoute() {
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path="/forgot-password" element={<ForgotPassword />} />
-            <Route path="/sign-in" element={<SignIn />} />
             {/* 
             <Route path="/otp" element={<Otp />} />
             <Route path="/resend-otp" element={<ResendOtp />} />
