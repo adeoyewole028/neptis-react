@@ -1,7 +1,7 @@
 import { Routes, Route, Navigate, Outlet, useLocation } from "react-router-dom";
 import { useSelector } from "react-redux";
 import AuthLayout from "../layouts/authLayout";
-import MainLayout from "../layouts/MainLayout";
+import MainLayout from "../layouts/mainLayout";
 import { AnimatePresence } from "framer-motion";
 import Home from "../pages/home/index";
 import Login from "../pages/authentication/login/index";
