@@ -2,7 +2,7 @@
 const FrameImageOne = () => (
   <img
     className=""
-    src="/images/frame.png"
+    src="/images/webFrame.png"
     alt="Product screenshot"
     loading="lazy"
   />

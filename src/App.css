@@ -2,9 +2,10 @@
   display: flex;
   flex-direction: column;
   background: #221c38;
-  background-size: cover;
+  height: 180vh;
+  /* background-size: cover;
   background-repeat: no-repeat;
   background-image: url("/images/mobile-bg.png");
   background-position: center top;
-  background-attachment: scroll;
+  background-attachment: scroll; */
 }

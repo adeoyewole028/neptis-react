@@ -1,3 +1,11 @@
+import { Link } from "react-scroll";
+
+const navigation = [
+  { name: "Home", href: "hero" },
+  { name: "Features", href: "features" },
+  { name: "How it works", href: "how-it-works" },
+  { name: "Pricing", href: "pricing" },
+];
 const Footer = () => {
   return (
     <div>
@@ -6,38 +14,32 @@ const Footer = () => {
         aria-label="Global"
       >
         <div className="flex lg:flex-1">
-          <a href="#" className="-m-1.5 p-1.5">
+          <Link
+            smooth={true}
+            duration={500}
+            offset={-70}
+            to="hero"
+            className="-m-1.5 p-1.5"
+          >
             <span className="sr-only">Neptis</span>
             <img className="h-8 w-auto" src="/images/logo.png" alt="Neptis" />
-          </a>
+          </Link>
         </div>
 
         <div className="flex items-center">
           <div className="flex lg:flex-row flex-col lg:gap-x-12 gap-6">
-            <a
-              href="#"
-              className="text-sm font-light leading-6 text-[rgba(255,255,255,0.80)]"
-            >
-              Home
-            </a>
-            <a
-              href="#features"
-              className="text-sm font-light leading-6 text-[rgba(255,255,255,0.80)]"
-            >
-              Features
-            </a>
-            <a
-              href="#how-it-works"
-              className="text-sm font-light leading-6 text-[rgba(255,255,255,0.80)]"
-            >
-              How it works
-            </a>
-            <a
-              href="#pricing"
-              className="text-sm font-light leading-6 text-[rgba(255,255,255,0.80)]"
-            >
-              Pricing
-            </a>
+            {navigation.map((item) => (
+              <Link
+                smooth={true}
+                duration={500}
+                offset={-70}
+                key={item.name}
+                to={item.href}
+                className="cursor-pointer text-sm font-light leading-6 text-[rgba(255,255,255,0.80)]"
+              >
+                {item.name}
+              </Link>
+            ))}
           </div>
         </div>
         <div className="flex lg:flex-1 gap-5 lg:justify-end">

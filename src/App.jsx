@@ -1,12 +1,12 @@
 import { AppProvider } from "./context";
-import Home from "./pages/home";
+import AppRoute from "./router";
 import "./App.css";
 
 const App = () => {
   return (
     <div className="bg-mobile">
       <AppProvider>
-        <Home />
+        <AppRoute />
       </AppProvider>
     </div>
   );

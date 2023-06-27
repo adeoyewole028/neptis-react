@@ -1,14 +1,14 @@
 import { lazy, Suspense } from "react";
 
 // Define lazy-loaded versions of images
-const FrameImageOne = lazy(() => import("../frame images/FrameImageOne"));
+const FrameImageOne = lazy(() => import("../frameImages/FrameImageOne"));
 
-const MobileFrameImage = lazy(() => import("../frame images/MobileFrameImage"));
+const MobileFrameImage = lazy(() => import("../frameImages/MobileFrameImage"));
 const Hero = () => {
   return (
     <>
-      <div className="relative isolate px-6 lg:px-8">
-        <div className="mx-auto max-w-4xl py-5 sm:py-48 lg:py-20">
+      <div id="hero" className="relative isolate px-6 lg:px-8">
+        <div className="mx-auto max-w-4xl pt-16 pb-5 sm:py-48 lg:py-20">
           <div className="text-center">
             <h1 className="text-[32px] font-semibold tracking-tight text-white sm:text-6xl">
               Transform Your Images into Stunning Websites with Neptis

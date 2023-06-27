@@ -6,3 +6,24 @@
 body {
   scroll-behavior: smooth;
 }
+
+.btn-base-400 {
+  @apply bg-[#C6C3C3] text-[#8C8787] py-5 px-10;
+}
+.text-base-400 {
+  @apply text-[#C6C3C3];
+}
+.text-base-500 {
+  @apply text-[#8C8787];
+}
+.text-purple-500 {
+  @apply text-[#C139E0];
+}
+
+.border-input-base-500 {
+  @apply border-[#8C8787] p-4 text-white;
+}
+
+.bg-purple-500 {
+  @apply bg-[#C139E0];
+}

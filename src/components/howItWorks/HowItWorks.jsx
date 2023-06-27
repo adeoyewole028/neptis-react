@@ -3,9 +3,9 @@ import { works } from "./howItWorksData";
 import "./work.css";
 
 // Define lazy-loaded versions of images
-const FrameImageTwo = lazy(() => import("../frame images/FrameImageTwo"));
+const FrameImageTwo = lazy(() => import("../frameImages/FrameImageTwo"));
 
-const MobileFrameImage = lazy(() => import("../frame images/MobileFrameImage"));
+const MobileFrameImage = lazy(() => import("../frameImages/MobileFrameImage"));
 
 const HowItWorks = () => {
   return (

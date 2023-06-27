@@ -2,7 +2,7 @@ import { features } from "./featuresData";
 const Features = () => {
   return (
     <>
-      <div id="features" className="relative isolate px-6 lg:px-8">
+      <div className="relative isolate px-6 lg:px-8">
         <div className="mx-auto max-w-7xl py-10 sm:py-48 lg:py-20">
           <div className="text-center">
             <h1 className="text-2xl font-semibold tracking-tight text-white sm:text-6xl">

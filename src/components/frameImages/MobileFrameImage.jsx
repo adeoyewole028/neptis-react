@@ -2,7 +2,7 @@
 const MobileFrameImage = () => (
   <img
     className="w-full"
-    src="/images/mobile-frame.png"
+    src="/images/mobileFrame.png"
     alt="Product screenshot"
     loading="lazy"
   />
