@@ -1,28 +1,28 @@
 import {
-  LOGIN_REQUEST,
-  LOGIN_SUCCESS,
-  LOGIN_FAILURE,
-} from "../../actionTypes/auth/loginActionTypes";
+  ACTIVATION_REQUEST,
+  ACTIVATION_SUCCESS,
+  ACTIVATION_FAILURE,
+} from "../../actionTypes/auth/activationActionTypes";
 
 const initialState = {
   loading: false,
   error: null,
 };
 
-const loginReducer = (state = initialState, action) => {
+const activationReducer = (state = initialState, action) => {
   switch (action.type) {
-    case LOGIN_REQUEST:
+    case ACTIVATION_REQUEST:
       return {
         ...state,
         loading: true,
         error: null,
       };
-    case LOGIN_SUCCESS:
+    case ACTIVATION_SUCCESS:
       return {
         ...state,
         loading: false,
       };
-    case LOGIN_FAILURE:
+    case ACTIVATION_FAILURE:
       return {
         ...state,
         loading: false,
@@ -33,4 +33,4 @@ const loginReducer = (state = initialState, action) => {
   }
 };
 
-export default loginReducer;
+export default activationReducer;

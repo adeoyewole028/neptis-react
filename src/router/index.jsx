@@ -5,8 +5,11 @@ import MainLayout from "../layouts/mainLayout";
 import { AnimatePresence } from "framer-motion";
 import Home from "../pages/home/index";
 import Login from "../pages/authentication/login/index";
-import ForgotPassword from "../pages/authentication/forgotPassword/forgot-password";
+import ForgotPassword from "../pages/authentication/forgotPassword/forgotPassword";
+import ResetPassword from "../pages/authentication/forgotPassword/resetPassword";
 import Register from "../pages/authentication/registration/index";
+import ConfirmEmail from "../pages/authentication/confirmEmail";
+import ConfirmEmailSuccess from "../pages/authentication/confirmEmail/confirmEmailSuccess";
 
 function InAppPrivateRoute() {
   const { isLoggedIn, user } = useSelector((state) => state.loginReducer);
@@ -29,7 +32,7 @@ export default function AppRoute() {
           <Route
             path="/Not-found"
             element={
-              <div className="grid grid-cols-1 place-items-center text-base h-screen">
+              <div className="grid grid-cols-1 place-items-center text-base h-screen text-white">
                 <div>PAGE NOT FOUND.....</div>
               </div>
             }
@@ -50,10 +53,15 @@ export default function AppRoute() {
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path="/forgot-password" element={<ForgotPassword />} />
-            {/* 
-            <Route path="/otp" element={<Otp />} />
-            <Route path="/resend-otp" element={<ResendOtp />} />
+            <Route path="/confirm-email" element={<ConfirmEmail />} />
+            <Route
+              path="/confirm-email-success"
+              element={<ConfirmEmailSuccess />}
+            />
             <Route path="/reset-password" element={<ResetPassword />} />
+
+            {/* 
+            <Route path="/resend-otp" element={<ResendOtp />} />
             <Route path="/confirm-email" element={<ConfirmEmail />} /> */}
           </Route>
         </Routes>

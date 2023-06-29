@@ -1,4 +1,4 @@
-import { AppProvider } from "./context";
+import { AppProvider } from "./app-provider";
 import AppRoute from "./router";
 import "./App.css";
 

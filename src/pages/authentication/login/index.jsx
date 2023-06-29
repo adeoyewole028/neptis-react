@@ -1,9 +1,15 @@
 import Form from "../../../components/form/Form";
+import { useDispatch } from "react-redux";
+import { loginUser } from "../../../redux/actions/auth/loginAction";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
   const handleSignIn = (formData) => {
-    // Handle registration logic
-    console.log(formData);
+    // console.log(formData);
+    dispatch(loginUser(formData, navigate));
   };
 
   const fields = [

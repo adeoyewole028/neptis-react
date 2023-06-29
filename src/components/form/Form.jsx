@@ -1,8 +1,12 @@
+// Form component
+
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
 const Form = ({
   title,
+  subtitle,
   buttonText,
   fields,
   showGoogleButton,
@@ -12,13 +16,19 @@ const Form = ({
   linkSubText,
   passwordText,
   passwordURL,
+  passwordError,
 }) => {
   const [formData, setFormData] = useState({});
   const [passwordVisible, setPasswordVisible] = useState(false);
+  const [passwordVisibleTwo, setPasswordVisibleTwo] = useState(false);
+
   const togglePasswordVisibility = () => {
-    setPasswordVisible(!passwordVisible);
+    setPasswordVisible((prevState) => !prevState);
   };
 
+  const togglePasswordVisibilityTwo = () => {
+    setPasswordVisibleTwo((prevState) => !prevState);
+  };
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
@@ -33,7 +43,7 @@ const Form = ({
       <div className="flex min-h-full h-min flex-col justify-center py-12 sm:px-6 lg:px-8">
         <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
           <div className="py-8 px-4 shadow sm:rounded-lg sm:px-10">
-            <div className="sm:mx-auto sm:w-full sm:max-w-md mb-10">
+            <div className="sm:mx-auto sm:w-full sm:max-w-md">
               <img
                 className="mx-auto h-12 w-auto"
                 src="/images/auth-logo.png"
@@ -43,7 +53,9 @@ const Form = ({
                 {title}
               </h2>
             </div>
-
+            <p className="text-base-500 text-base font-light text-center">
+              {subtitle}
+            </p>
             {/* Google Sign in button */}
             {showGoogleButton && (
               <div className="my-6">
@@ -109,7 +121,15 @@ const Form = ({
                       <input
                         id={field.name}
                         name={field.name}
-                        type={passwordVisible ? "text" : "password"}
+                        type={
+                          field.name === "password"
+                            ? passwordVisible
+                              ? "text"
+                              : "password"
+                            : passwordVisibleTwo
+                            ? "text"
+                            : "password"
+                        }
                         placeholder={field.placeholder}
                         autoComplete={field.autoComplete}
                         required={field.required}
@@ -117,20 +137,37 @@ const Form = ({
                         value={formData[field.name] || ""}
                         onChange={handleChange}
                       />
-                      <div
-                        className="absolute inset-y-0 right-0 pr-3 flex items-center cursor-pointer"
-                        onClick={togglePasswordVisibility}
-                      >
-                        {passwordVisible ? (
-                          <span className="material-symbols-outlined text-base-500">
-                            visibility
-                          </span>
-                        ) : (
-                          <span className="material-symbols-outlined text-base-500">
-                            visibility_off
-                          </span>
-                        )}
-                      </div>
+                      {field.name === "passwordTwo" ? (
+                        <div
+                          className="absolute inset-y-0 right-0 pr-3 flex items-center cursor-pointer"
+                          onClick={togglePasswordVisibilityTwo}
+                        >
+                          {passwordVisibleTwo ? (
+                            <span className="material-symbols-outlined text-base-500">
+                              visibility
+                            </span>
+                          ) : (
+                            <span className="material-symbols-outlined text-base-500">
+                              visibility_off
+                            </span>
+                          )}
+                        </div>
+                      ) : (
+                        <div
+                          className="absolute inset-y-0 right-0 pr-3 flex items-center cursor-pointer"
+                          onClick={togglePasswordVisibility}
+                        >
+                          {passwordVisible ? (
+                            <span className="material-symbols-outlined text-base-500">
+                              visibility
+                            </span>
+                          ) : (
+                            <span className="material-symbols-outlined text-base-500">
+                              visibility_off
+                            </span>
+                          )}
+                        </div>
+                      )}
                     </div>
                   ) : (
                     <input
@@ -146,7 +183,7 @@ const Form = ({
                     />
                   )}
                   {/* Additional text for password field */}
-                  {field.registrationOnly && (
+                  {field.registrationOnly && passwordError && (
                     <p className="text-xs text-base-500 mt-4">
                       Password must be at least 8 characters and should contain
                       one uppercase letter, one lowercase letter, and one
@@ -190,6 +227,28 @@ const Form = ({
       </div>
     </>
   );
+};
+
+Form.propTypes = {
+  title: PropTypes.string,
+  subtitle: PropTypes.string,
+  fields: PropTypes.array,
+  buttonText: PropTypes.string,
+  linkText: PropTypes.string,
+  linkURL: PropTypes.string,
+  linkSubText: PropTypes.string,
+  passwordText: PropTypes.string,
+  passwordURL: PropTypes.string,
+  formData: PropTypes.object,
+  handleChange: PropTypes.func,
+  handleSubmit: PropTypes.func,
+  passwordVisible: PropTypes.bool,
+  passwordVisibleTwo: PropTypes.bool,
+  togglePasswordVisibility: PropTypes.func,
+  togglePasswordVisibilityTwo: PropTypes.func,
+  showGoogleButton: PropTypes.bool,
+  onSubmit: PropTypes.func,
+  passwordError: PropTypes.string,
 };
 
 export default Form;

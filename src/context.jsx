@@ -1,31 +1,24 @@
-import { useState, useContext, createContext } from "react";
-
+import { useContext, createContext } from "react";
+import PropTypes from "prop-types";
 const AppContext = createContext();
 
 const AppProvider = ({ children }) => {
-  const [currentTheme, setTheme] = useState([]);
+  // const [userToken, setUserToken] = useState(null);
+  // const [user, setUser] = useState(null);
+  // const [userRole, setUserRole] = useState(null);
+  // const [userProfile, setUserProfile] = useState(null);
 
-  function toggleTheme() {
-    const newTheme = currentTheme === "light" ? "dark" : "light";
-    setTheme(newTheme);
-    //save to local storage
-    localStorage.setItem("theme", newTheme);
-  }
-
-  return (
-    <AppContext.Provider
-      value={{
-        theme: currentTheme,
-        toggleTheme,
-      }}
-    >
-      {children}
-    </AppContext.Provider>
-  );
+  return <AppContext.Provider value={{
+    
+  }}>{children}</AppContext.Provider>;
 };
 
 export const useGlobalContext = () => {
   return useContext(AppContext);
+};
+
+AppProvider.propTypes = {
+  children: PropTypes.node.isRequired,
 };
 
 export { AppContext, AppProvider };

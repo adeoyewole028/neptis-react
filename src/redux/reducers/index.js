@@ -1,5 +1,8 @@
 import { combineReducers } from "redux";
 import loginReducer from "./auth/loginReducer";
+import registrationReducer from "./auth/registrationReducer";
+import activationReducer from "./auth/activationReducer";
+
 // import registerReducer from "./registerReducer";
 // import otpReducer from "./otpReducer";
 // import forgotPasswordReducer from "./forgotPasswordReducer";
@@ -9,11 +12,13 @@ import loginReducer from "./auth/loginReducer";
 
 const rootReducer = combineReducers({
   loginReducer,
-//   registerReducer,
-//   otpReducer,
-//   forgotPasswordReducer,
-//   resetPasswordReducer,
-//   confirmEmailReducer,
-//   resendOtpReducer,
+  registrationReducer,
+  activationReducer,
+  //   registerReducer,
+  //   otpReducer,
+  //   forgotPasswordReducer,
+  //   resetPasswordReducer,
+  //   confirmEmailReducer,
+  //   resendOtpReducer,
 });
 export default rootReducer;

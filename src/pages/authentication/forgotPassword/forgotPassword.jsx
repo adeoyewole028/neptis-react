@@ -19,8 +19,9 @@ const ForgotPassword = () => {
 
   return (
     <Form
-      title="Forgot Password"
+      title="Forgot Password?"
       buttonText="Reset Password"
+      subtitle="Enter registered email address. We’ll send you a reset code."
       fields={fields}
       onSubmit={handleForgotPassword}
     />
